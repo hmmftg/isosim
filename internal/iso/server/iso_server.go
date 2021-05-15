@@ -9,13 +9,14 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	net2 "github.com/hmmftg/libiso/net"
-	log "github.com/sirupsen/logrus"
 	"io"
 	"isosim/internal/services/data"
 	"net"
 	"strconv"
 	"sync"
+
+	net2 "github.com/hmmftg/libiso/net"
+	log "github.com/sirupsen/logrus"
 )
 
 //The list of servers that are currently running
@@ -158,7 +159,7 @@ func handleConnection(connection net.Conn, def *data.ServerDef) {
 		return
 	}
 	var mliLen uint32 = 2
-	if mliType == net2.Mli4e || mliType == net2.Mli4i {
+	if mliType == net2.Mli4e || mliType == net2.Mli4i || mliType == net2.Mli4ae || mliType == net2.Mli4ai {
 		mliLen = 4
 	}
 
@@ -186,6 +187,11 @@ func handleConnection(connection net.Conn, def *data.ServerDef) {
 		case net2.Mli4i, net2.Mli4e:
 			msgLen = binary.BigEndian.Uint32(mli)
 			if mliType == net2.Mli4i {
+				msgLen -= mliLen
+			}
+		case net2.Mli4ai, net2.Mli4ae:
+			msgLen = strconv.Atoi(tmp)
+			if mliType == net2.Mli4ai {
 				msgLen -= mliLen
 			}
 		}
@@ -239,6 +245,10 @@ func getMliFromString(mliType string) (net2.MliType, error) {
 		return net2.Mli4e, nil
 	case "4i", "4I":
 		return net2.Mli4i, nil
+	case "4ae", "4AE":
+		return net2.Mli4ae, nil
+	case "4ai", "4AI":
+		return net2.Mli4ai, nil
 
 	default:
 		return "", fmt.Errorf("isosim: (server) Invalid MLI-Type - %s", mliType)

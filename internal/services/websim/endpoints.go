@@ -3,11 +3,12 @@ package websim
 import (
 	"context"
 	"fmt"
+	"isosim/internal/services/data"
+
 	"github.com/go-kit/kit/endpoint"
 	"github.com/go-kit/kit/log"
 	netutil "github.com/hmmftg/libiso/net"
 	isov2 "github.com/hmmftg/libiso/v2/iso8583"
-	"isosim/internal/services/data"
 )
 
 type GetAllSpecsRequest struct{}
@@ -230,6 +231,10 @@ func sendToHostEndpoint(s Service) endpoint.Endpoint {
 			mli = netutil.Mli4i
 		case "4E", "4e":
 			mli = netutil.Mli4e
+		case "4AI", "4ai":
+			mli = netutil.Mli4ai
+		case "4AE", "4ae":
+			mli = netutil.Mli4ae
 
 		default:
 			return nil, fmt.Errorf("isosim: Invalid MLI-Type %s in request", req.MLI)
