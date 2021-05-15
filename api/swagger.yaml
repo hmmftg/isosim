@@ -1,10 +1,10 @@
 swagger: "2.0"
 info:
-  description: "This is ISO WebSim [http://github.com/rkbalgi/isosim](http://github.com/rkbalgi/isosim)"
+  description: "This is ISO WebSim [http://github.com/hmmftg/isosim](http://github.com/hmmftg/isosim)"
   version: "0.7.0"
   title: "Iso WebSim"
   contact:
-    email: "rkbalgi@gmail.com"
+    email: "hmmftg@gmail.com"
   license:
     name: "Apache 2.0"
     url: "http://www.apache.org/licenses/LICENSE-2.0.html"

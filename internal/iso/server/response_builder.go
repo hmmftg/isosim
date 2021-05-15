@@ -1,7 +1,7 @@
 package server
 
 import (
-	iso "github.com/rkbalgi/libiso/v2/iso8583"
+	iso "github.com/hmmftg/libiso/v2/iso8583"
 	log "github.com/sirupsen/logrus"
 	"isosim/internal/services/data"
 )

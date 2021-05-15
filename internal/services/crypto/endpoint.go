@@ -6,7 +6,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/go-kit/kit/endpoint"
-	isov2 "github.com/rkbalgi/libiso/v2/iso8583"
+	isov2 "github.com/hmmftg/libiso/v2/iso8583"
 	log "github.com/sirupsen/logrus"
 	"isosim/internal/services/data"
 	"strings"

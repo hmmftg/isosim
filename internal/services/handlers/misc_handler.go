@@ -2,8 +2,8 @@ package handlers
 
 import (
 	"encoding/hex"
-	"github.com/rkbalgi/libiso/hsm"
-	"github.com/rkbalgi/libiso/net"
+	"github.com/hmmftg/libiso/hsm"
+	"github.com/hmmftg/libiso/net"
 	log "github.com/sirupsen/logrus"
 	"isosim/internal/iso"
 

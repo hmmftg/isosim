@@ -6,7 +6,7 @@ import (
 	"github.com/go-kit/kit/log/logrus"
 	"github.com/go-kit/kit/transport"
 	httptransport "github.com/go-kit/kit/transport/http"
-	isov2 "github.com/rkbalgi/libiso/v2/iso8583"
+	isov2 "github.com/hmmftg/libiso/v2/iso8583"
 	log "github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/assert"
 	"io/ioutil"

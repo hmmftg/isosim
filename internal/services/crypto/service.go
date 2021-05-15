@@ -3,8 +3,8 @@ package crypto
 import (
 	"encoding/hex"
 	"errors"
-	"github.com/rkbalgi/libiso/crypto/mac"
-	isov2 "github.com/rkbalgi/libiso/v2/iso8583"
+	"github.com/hmmftg/libiso/crypto/mac"
+	isov2 "github.com/hmmftg/libiso/v2/iso8583"
 	log "github.com/sirupsen/logrus"
 )
 

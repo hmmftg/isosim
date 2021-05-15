@@ -3,7 +3,7 @@
 package data
 
 import (
-	isov2 "github.com/rkbalgi/libiso/v2/iso8583"
+	isov2 "github.com/hmmftg/libiso/v2/iso8583"
 )
 
 // JsonFieldInfoRep is a field info that is used in the front end application (sent as a result of

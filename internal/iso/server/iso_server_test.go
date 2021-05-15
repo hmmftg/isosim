@@ -3,8 +3,8 @@ package server
 import (
 	"encoding/hex"
 	"encoding/json"
-	netutil "github.com/rkbalgi/libiso/net"
-	isov2 "github.com/rkbalgi/libiso/v2/iso8583"
+	netutil "github.com/hmmftg/libiso/net"
+	isov2 "github.com/hmmftg/libiso/v2/iso8583"
 	log "github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/assert"
 	"isosim/internal/db"

@@ -1,6 +1,6 @@
 # stage 1
 FROM golang:alpine
-MAINTAINER Raghavendra Balgi;rkbalgi@gmail.com
+MAINTAINER Raghavendra Balgi;hmmftg@gmail.com
 COPY . /home/isosim/app/isosim
 WORKDIR /home/isosim/app/isosim/cmd/isosim
 RUN go build -v -o app .

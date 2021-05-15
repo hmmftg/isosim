@@ -1,6 +1,6 @@
 // Package server has types to help define and serve ISO specs, build responses
 // based on server definitions etc
-package server //github.com/rkbalgi/isosim/server
+package server //github.com/hmmftg/isosim/server
 
 import (
 	"bytes"
@@ -9,7 +9,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	net2 "github.com/rkbalgi/libiso/net"
+	net2 "github.com/hmmftg/libiso/net"
 	log "github.com/sirupsen/logrus"
 	"io"
 	"isosim/internal/services/data"

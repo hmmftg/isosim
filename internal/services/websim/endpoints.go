@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"github.com/go-kit/kit/endpoint"
 	"github.com/go-kit/kit/log"
-	netutil "github.com/rkbalgi/libiso/net"
-	isov2 "github.com/rkbalgi/libiso/v2/iso8583"
+	netutil "github.com/hmmftg/libiso/net"
+	isov2 "github.com/hmmftg/libiso/v2/iso8583"
 	"isosim/internal/services/data"
 )
 

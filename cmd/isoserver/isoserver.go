@@ -3,7 +3,7 @@ package main
 import (
 	"encoding/json"
 	"flag"
-	isov2 "github.com/rkbalgi/libiso/v2/iso8583"
+	isov2 "github.com/hmmftg/libiso/v2/iso8583"
 	log "github.com/sirupsen/logrus"
 	"io/ioutil"
 	"isosim/internal/iso/server"
