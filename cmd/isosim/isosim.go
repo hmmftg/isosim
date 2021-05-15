@@ -3,10 +3,10 @@ package main
 import (
 	"flag"
 	"fmt"
-	isov2 "github.com/hmmftg/libiso/v2/iso8583"
 	"isosim/internal/iso"
 
-	log "github.com/sirupsen/logrus"
+	isov2 "github.com/hmmftg/libiso/v2/iso8583"
+
 	"isosim/internal/db"
 	"isosim/internal/services"
 	"net/http"
@@ -15,6 +15,8 @@ import (
 	"strconv"
 	"strings"
 	"sync"
+
+	log "github.com/sirupsen/logrus"
 )
 
 //v0.1 - Initial version
