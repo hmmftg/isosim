@@ -33,10 +33,10 @@ func main() {
 	fmt.Println("======================================================")
 
 	logLevel := flag.String("log-level", "debug", "Log level - [trace|debug|warn|info|error].")
-	flag.StringVar(&iso.HTMLDir, "html-dir", "", "Directory that contains any HTML's and js/css files etc.")
-	specsDir := flag.String("specs-dir", "", "The directory containing the ISO spec definition files.")
-	httpPort := flag.Int("http-port", 8080, "HTTP/s port to listen on.")
-	dataDir := flag.String("data-dir", "", "Directory to store messages (data sets). This is a required field.")
+	flag.StringVar(&iso.HTMLDir, "html-dir", "web", "Directory that contains any HTML's and js/css files etc.")
+	specsDir := flag.String("specs-dir", "test/testdata/specs", "The directory containing the ISO spec definition files.")
+	httpPort := flag.Int("http-port", 9000, "HTTP/s port to listen on.")
+	dataDir := flag.String("data-dir", "test/testdata/appdata", "Directory to store messages (data sets). This is a required field.")
 
 	flag.Parse()
 

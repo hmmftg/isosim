@@ -190,7 +190,9 @@ func handleConnection(connection net.Conn, def *data.ServerDef) {
 				msgLen -= mliLen
 			}
 		case net2.Mli4ai, net2.Mli4ae:
-			msgLen = strconv.Atoi(tmp)
+			var sMli = string(tmp)
+			var nMli, _ = strconv.Atoi(sMli)
+			msgLen = uint32(nMli)
 			if mliType == net2.Mli4ai {
 				msgLen -= mliLen
 			}
